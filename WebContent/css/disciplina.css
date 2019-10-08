@@ -47,16 +47,13 @@
     background: #f1f1f1; 
 }
 .services > div > a {
-    background: white;
-    font-weight: 100;
+    background: #858585;
+    font-weight: 1000;
     line-height: 2.5;
     padding: 3px 8px;   
     font-size: 12px;
     margin: 10px;
-}
-.services > div > a:hover {
-    color: white;
-    background: #858585;
+    color: #f8f8f8;
 }
 .abrir {
     display: flex!important;

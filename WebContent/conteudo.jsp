@@ -23,7 +23,7 @@
             </div>
 
             <div>
-                <a href="disciplinas.html" class="line">Disciplinas</a>
+                <a href="disciplinas" class="line">Disciplinas</a>
                 <a href="#minhaConta">Minha conta</a>
                 <a href="#sair">Sair</a>
             </div>
@@ -31,7 +31,7 @@
     </header>
 	<div id="timeLine">
     	<div class="structure">
-    		<p>%- NOME DA DISCIPLINA -%  >  %- NOME DO CONTEUDO -%</p>
+    		<p>${ nomeDisciplina } <b> > </b> ${ nomeMateria }</p>
     	</div>
     </div>
     <div class="structure">
@@ -40,7 +40,6 @@
         <div id="choice">
             <p>Escolha o conteudo</p>
             <select name="conteudo" id="conteudo">
-                <option></option>
                 <c:forEach var="material" items="${lista }">
 					<option value="2">${material.titulo }</option>
 				</c:forEach>

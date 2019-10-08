@@ -22,9 +22,14 @@ public class listarMaterial extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     	MaterialDAO mDAO = null;
     	try {
+    		String disciplina = req.getParameter("disciplina");
+    		String materia = req.getParameter("material");
+    		
     		mDAO = new MaterialDAO();
     		List<Material> lista = mDAO.getConteudos();
     		System.out.println(lista);
+    		req.setAttribute("nomeDisciplina", disciplina);
+    		req.setAttribute("nomeMateria", materia);
     		req.setAttribute("lista", lista);
     		
     		req.getRequestDispatcher("conteudo.jsp").forward(req, resp);

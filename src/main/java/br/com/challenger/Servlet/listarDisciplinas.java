@@ -24,6 +24,7 @@ public class listarDisciplinas extends HttpServlet {
     	DisciplinasDAO dDAO = null;
     	
     	try {
+    		
     		dDAO = new DisciplinasDAO();
     		List<Disciplinas> lista = dDAO.getDisciplinas();
     		
