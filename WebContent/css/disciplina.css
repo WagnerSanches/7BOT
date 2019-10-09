@@ -23,13 +23,13 @@
     padding: 25px 0px 15px 120px;
     background: #ff7f26;
 }
-#categorie > form > input,button {
+#frm-pesquisa > input,button {
     padding: 5px 5px;
 }
-#categorie > form > input {
+#frm-pesquisa > input {
     width: 30%;
 }
-#categorie > form > button {
+#frm-pesquisa button {
     outline: none;
     cursor: pointer;
     background: none;

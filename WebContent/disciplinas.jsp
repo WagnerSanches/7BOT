@@ -36,39 +36,43 @@
             </div>
         </div>
 
-        <div class="structure">
-            <div id="categorie">    
-                <form action="" id="frm-pesquisa">
-                    <input list="browsers" name="browser" placeholder="Pesquise disciplinas" name="pesq">
-                        <datalist id="browsers" size="3">
-                          <option value="Computational Thinking">
-                          <option value="Design de Software">
-                          <option value="Estruture de banco de dados">
-                          <option value="Web Reponsive">
-                          <option value="Domain Driver Design">
-                        </datalist>
-                    <button id="btn-disciplinas">Pesquisar</button>
-                </form>
+        
+        <div id="categorie">    
+            <div class="structure">
+
+            <form action="" id="frm-pesquisa">
+                <input list="browsers" name="browser" placeholder="Pesquise disciplinas" name="pesq">
+                    <datalist id="browsers" size="3">
+                        <option value="Computational Thinking">
+                        <option value="Design de Software">
+                        <option value="Estruture de banco de dados">
+                        <option value="Web Reponsive">
+                        <option value="Domain Driver Design">
+                    </datalist>
+                <button id="btn-disciplinas">Pesquisar</button>
+            </form>
             </div>
+        </div>
+        <div class="structure">
             <p id="load"> 
                 <img src="images/load.gif">
             </p>
             <p id="pesquisa"></p>
             <div id="service">   
                 
-				<c:forEach var="disciplina" items="${lista}">					
-					
-					<div class="services">
-	                    <h3>${disciplina.titulo}</h3>
-					
-	                    <div>
-							<c:forEach var="material" items="${disciplina.materias }">
-								<a href="listarMaterial?disciplina=${disciplina.titulo }&material=${material}">${material}</a>
-							</c:forEach>
-						</div>
-	                    
-                	</div>
-				</c:forEach>
+                <c:forEach var="disciplina" items="${lista}">					
+                    
+                    <div class="services">
+                        <h3>${disciplina.titulo}</h3>
+                    
+                        <div>
+                            <c:forEach var="material" items="${disciplina.materias }">
+                                <a href="listarMaterial?disciplina=${disciplina.titulo }&material=${material}">${material}</a>
+                            </c:forEach>
+                        </div>
+                        
+                    </div>
+                </c:forEach>
 
 
             </div>

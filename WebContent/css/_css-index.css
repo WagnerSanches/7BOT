@@ -17,7 +17,7 @@
 
     /* BACKGROUND DA PAGINA */
 #background {
-    background-image: radial-gradient(#fc9a58, #ff7f26);
+    background-image: linear-gradient(to top,#fc9a58, #ff7f26);
     height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -25,21 +25,25 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    position: relative;
 }
-
-
-    /* DIV DO TEXTO A DIREITO */
-/* #box-text {
+#background {
+    width: 100%;
 }
-#box-text > p {
-    font-family: effect;
-    font-size: 90px;
-    font-weight: 100!important;
-    color: #f1f1f1;
-    text-shadow:  3px 3px rgb(0, 0, 0);
-} */
-
-
+#formal-index {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+}
+#formal-index > img, p {
+    display: block;
+    color: #f8f8f8;
+}
+#formal-index > img {
+    margin: 0px auto;
+    width: 13%;
+}
     /* TELA BRANCA DO LADO ESQUERDO*/
 #side-right {
     display: inline-block;
