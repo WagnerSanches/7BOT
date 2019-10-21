@@ -2,8 +2,6 @@ drop table setebot_material;
 drop table SETEBOT_DISCIPLINA;
 drop table SETEBOT_CONTEUDO;
 
-
-
 create table SETEBOT_DISCIPLINA (
     ID_DISCIPLINA number primary key,
     NOME VARCHAR2(70)

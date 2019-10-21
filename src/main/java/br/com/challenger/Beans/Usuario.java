@@ -5,7 +5,7 @@ public class Usuario {
 	private String nome;
 	private String email;
 	private String senha;
-	private String criacao;
+	private String data;
 	
 	public Usuario() {}
 	
@@ -15,12 +15,12 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
-	public Usuario(String nome, String email, String senha, String criacao) {
+	public Usuario(String nome, String email, String senha, String data) {
 		super();
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
-		this.criacao = criacao;
+		this.data = data;
 	}
 
 	
@@ -32,12 +32,12 @@ public class Usuario {
 		this.id = id;
 	}
 
-	public String getCriacao() {
-		return criacao;
+	public String getData() {
+		return data;
 	}
 
-	public void setCriacao(String criacao) {
-		this.criacao = criacao;
+	public void setData(String data) {
+		this.data = data;
 	}
 
 	public String getNome() {

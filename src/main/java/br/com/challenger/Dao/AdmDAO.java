@@ -37,7 +37,7 @@ public class AdmDAO {
 				u.setNome(rs.getString("NOME_USUARIO"));
 				u.setEmail(rs.getString("EMAIL_USUARIO"));
 				u.setSenha(rs.getString("SENHA_USUARIO"));
-				u.setCriacao(rs.getString("CRIACAO_USUARIO"));
+				u.setData(rs.getString("CRIACAO_USUARIO"));
 				listaUsuario.add(u);
 			}
 		}

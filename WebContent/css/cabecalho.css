@@ -62,6 +62,14 @@ body {
 	line-height: 90px;
 }
 
+#changes > div > button {
+    display: none;    
+}
+
+#changes > div > button > img{
+    display: none;
+    width: 21px;
+}
 #text-background {
     background: #293F76;
 }
@@ -81,4 +89,35 @@ body {
     box-sizing: border-box;
     padding: 20px 5px;
     box-shadow: 4px 5px 10px 1px rgba(0, 0, 0, .2);
+}
+
+@media only screen and (max-width: 1100px) {
+    .structure {    
+        width: 100%;
+    }
+    #header-flex > div:last-child {
+        margin-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #changes > a {
+        display: none;
+    }
+    #changes {
+        padding-top: 35px;
+    }
+    #changes > div > button {
+        display: block;
+        color: white;
+    }
+    #changes > div > button > img{
+        display: block;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #header-flex > div > h1 {
+        font-size: 115%;
+    }
 }

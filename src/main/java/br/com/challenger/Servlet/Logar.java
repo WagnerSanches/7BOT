@@ -32,7 +32,7 @@ public class Logar implements Tarefa{
 		}
 		
 		if(user.indexOf(";") < 1) 
-			return "app.html?" + user;
+			return "index.html?" + user;
 		
 		// ESSA PARTE EU QUIS PEGAR O VALOR 'NOME' E PEGAR O PRIMEIRO NOME DO USUARIO
 		String nome = user.split(";")[0].split(" ")[0];

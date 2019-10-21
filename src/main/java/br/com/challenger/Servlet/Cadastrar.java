@@ -27,8 +27,8 @@ public class Cadastrar implements Tarefa {
 		String nome = req.getParameter("nome");
 		String email = req.getParameter("email");
 		String senha = req.getParameter("senha");
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		Usuario u = new Usuario(nome, email, senha, sdf.format(new Date()));
+		String data = req.getParameter("data");
+		Usuario u = new Usuario(nome, email, senha, data);
 		try {
 			user = BOUsuario.adicionarUsuario(u);
 		} catch(Exception e) {
