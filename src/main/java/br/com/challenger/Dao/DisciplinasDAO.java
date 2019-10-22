@@ -28,11 +28,12 @@ public class DisciplinasDAO {
 		rs = stmt.executeQuery();
 		
 		List<Disciplinas> listaDisciplinas = new ArrayList<Disciplinas>();
-		System.out.println("AQUI ENTRO");
+		
 		while(rs.next()) {
+			System.out.println("AQUI ENTRO");
 			listaDisciplinas.add(
 					
-					new Disciplinas(rs.getString("NOME_DISCIPLINA"), 
+					new Disciplinas(rs.getString("NOME"), 
 							getConteudo(rs.getInt("ID_DISCIPLINA"))));
 			
 		}

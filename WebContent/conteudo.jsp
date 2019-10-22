@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="css/cabecalho.css">
 <link rel="stylesheet" href="css/chat.css">
 <link rel="stylesheet" href="css/conteudos.css">
+<script src="js/auth.js"></script>
 <body>
     <header>
         <div class="structure" id="header-flex">
@@ -22,10 +23,20 @@
                 <h1 id="user-name">Bem vindo, </h1>
             </div>
 
-            <div>
+            <div id="changes">
                 <a href="disciplinas" class="line">Disciplinas</a>
-                <a href="#minhaConta">Minha conta</a>
-                <a href="#sair">Sair</a>
+                <a href="#minhaConta" id="alterar_conta">Minha conta</a>
+                <a href="deslogar">Sair</a>
+                <div>
+                    <button id="menu"><img src="images/menu.png" alt="menu"></button>
+                </div>
+            </div>
+        </div>
+        <div id="menu-container">
+            <div>
+                <a href="disciplinas">Disciplinas</a>
+                <a href="#minhaConta" id="alterar_conta">Minha conta</a>
+                <a href="deslogar">Sair</a>
             </div>
         </div>
     </header>
@@ -77,8 +88,8 @@
         <div id="chat">
             <div class="acessibilidade">
             	<p>Que tipo de mensagem</p>
-            	<p>você prefere receber da anna?</p>
-            	<button id="audio" class="choiceAceb">Apenas áudios</button>
+            	<p>vocï¿½ prefere receber da anna?</p>
+            	<button id="audio" class="choiceAceb">Apenas ï¿½udios</button>
             	<button id="text" class="choiceAceb">Apenas textos</button>
             </div>
         
@@ -106,7 +117,7 @@
 <script>
 	var audioOrText;
 </script>
-<script src="js/auth.js"></script>
+<script src="js/cabecalho.js"></script>
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 <script src="js/assistant.js"></script>
 <script src="js/stt.js"></script>

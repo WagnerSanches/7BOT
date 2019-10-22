@@ -12,6 +12,7 @@
 </head>
 <link rel="stylesheet" href="css/cabecalho.css">
 <link rel="stylesheet" href="css/disciplina.css">
+<script src="js/auth.js"></script>
 <body>
     <header>
         <div class="structure" id="header-flex">
@@ -21,10 +22,20 @@
                 <h1 id="user-name">Bem vindo, </h1>
             </div>
 
-            <div>
+            <div id="changes">
                 <a href="disciplinas" class="line">Disciplinas</a>
-                <a href="#minhaConta">Minha conta</a>
-                <a href="#sair">Sair</a>
+                <a href="#minhaConta" id="alterar_conta">Minha conta</a>
+                <a href="deslogar">Sair</a>
+                <div>
+                    <button id="menu"><img src="images/menu.png" alt="menu"></button>
+                </div>
+            </div>
+        </div>
+        <div id="menu-container">
+            <div>
+                <a href="disciplinas">Disciplinas</a>
+                <a href="#minhaConta" id="alterar_conta">Minha conta</a>
+                <a href="deslogar">Sair</a>
             </div>
         </div>
     </header>
@@ -81,6 +92,6 @@
     </main>
 
 </body>
-<script src="js/auth.js"></script>
+<script src="js/cabecalho.js"></script>
 <script src="js/service.js"></script>
 </html>

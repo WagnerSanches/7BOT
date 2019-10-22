@@ -1,5 +1,5 @@
 drop table SETEBOT_ALUNO;
-
+drop sequence id_alunos;
 create sequence id_alunos;
 
 create table SETEBOT_ALUNO (

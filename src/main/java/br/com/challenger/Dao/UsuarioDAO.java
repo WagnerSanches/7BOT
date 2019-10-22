@@ -22,20 +22,20 @@ public class UsuarioDAO {
 	}
 	
 	public int getUser(String email) throws Exception {
-		stmt = con.prepareStatement("SELECT * FROM CLGR_USUARIO WHERE EMAIL_USUARIO = ?");
+		stmt = con.prepareStatement("SELECT * FROM SETEBOT_ALUNO WHERE EMAIL = ?");
 		stmt.setString(1, email);
 		return stmt.executeUpdate();
 	}
 	
 	public int getUser(int id) throws Exception {
-		stmt = con.prepareStatement("SELECT * FROM CLGR_USUARIO WHERE ID_USUARIO = ?");
+		stmt = con.prepareStatement("SELECT * FROM SETEBOT_ALUNO WHERE ID_USUARIO = ?");
 		stmt.setInt(1, id);
 		return stmt.executeUpdate();
 	}
 	
 	
 	public Usuario authUser(String email, String senha) throws Exception {
-		stmt = con.prepareStatement("SELECT * FROM CLGR_USUARIO WHERE EMAIL_USUARIO = ? and SENHA_USUARIO = ?");
+		stmt = con.prepareStatement("SELECT * FROM SETEBOT_ALUNO WHERE EMAIL = ? and SENHA = ?");
 		
 		stmt.setString(1, email);
 		stmt.setString(2, senha);
@@ -44,9 +44,9 @@ public class UsuarioDAO {
 		rs = stmt.executeQuery();
 		
 		if(rs.next()) {
-			return new Usuario(rs.getString("NOME_USUARIO"),
-							   rs.getString("EMAIL_USUARIO"),
-							   rs.getString("SENHA_USUARIO"));
+			return new Usuario(rs.getString("NOME"),
+							   rs.getString("EMAIL"),
+							   rs.getString("SENHA"));
 		}
 		
 		return new Usuario();
@@ -55,7 +55,7 @@ public class UsuarioDAO {
 	
 	public boolean deleteUser(int id) throws Exception {
 		
-		stmt = con.prepareStatement("DELETE FROM CLGR_USUARIO WHERE ID_USUARIO = ?");
+		stmt = con.prepareStatement("DELETE FROM SETEBOT_ALUNO WHERE ID_USUARIO = ?");
 		stmt.setInt(1, id);
 		
 		return stmt.executeUpdate() > 0 ? true : false;
@@ -65,7 +65,7 @@ public class UsuarioDAO {
 	
 	public int insertUsuario(Usuario u) throws Exception {
 
-		stmt = con.prepareStatement("INSERT INTO CLGR_USUARIO VALUES(id_user.nextval, ?, ?, ?, ?)");
+		stmt = con.prepareStatement("INSERT INTO SETEBOT_ALUNO values(id_alunos.nextval, ?, ?, ?, ?)");
 		stmt.setString(1, u.getNome());
 		stmt.setString(2, u.getEmail());
 		stmt.setString(3, u.getSenha());
