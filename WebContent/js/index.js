@@ -84,8 +84,6 @@
         var validacao = validateRegister(nome, email, senha.value);
     
         if(validacao == "") {
-            showAndHide(frm_cad, frm_log);
-            activeBtn(btn_cad, btn_log);
             sendForm(frm_cad);
         } else {
             senha.value = "";
@@ -187,3 +185,12 @@
 
         erro.textContent = frase;
     }
+
+if(document.URL.indexOf("cadastrado=") > 0) {
+    var cad = document.URL.split("cadastrado=")[1];
+    var msg = document.querySelector("#sucessoLogin");
+
+    if(cad == "true") {
+        msg.textContent = "Cadastrado com sucesso!"
+    } 
+}

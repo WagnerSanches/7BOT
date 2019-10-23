@@ -10,7 +10,6 @@ import br.com.challenger.Beans.Disciplinas;
 import br.com.challenger.Conexao.Conexao;
 
 public class DisciplinasDAO {
-
 	private Connection con;
 	private PreparedStatement stmt;
 	private ResultSet rs;
@@ -22,26 +21,6 @@ public class DisciplinasDAO {
 	public void Encerrar() throws Exception {
 		con.close();
 	}
-	
-	public List<Disciplinas> getDisciplinas() throws Exception{
-		stmt = con.prepareStatement("SELECT * FROM SETEBOT_DISCIPLINA");
-		rs = stmt.executeQuery();
-		
-		List<Disciplinas> listaDisciplinas = new ArrayList<Disciplinas>();
-		
-		while(rs.next()) {
-			System.out.println("AQUI ENTRO");
-			listaDisciplinas.add(
-					
-					new Disciplinas(rs.getString("NOME"), 
-							getConteudo(rs.getInt("ID_DISCIPLINA"))));
-			
-		}
-		
-		return listaDisciplinas;
-		
-	}
-	
 	public List<String> getConteudo(int id) throws Exception {
 		stmt = con.prepareStatement("select NOME from SETEBOT_CONTEUDO where ID_DISCIPLINA = ?");
 		
@@ -57,6 +36,24 @@ public class DisciplinasDAO {
 		return listaConteudo;
 		
 	}
+	
+	public List<Disciplinas> getDisciplinas() throws Exception{
+		stmt = con.prepareStatement("SELECT * FROM SETEBOT_DISCIPLINA");
+		rs = stmt.executeQuery();
+		
+		
+		ArrayList<Disciplinas> listaDisciplinas = new ArrayList<Disciplinas>();
+		
+		while(rs.next()) {
+			System.out.println(rs.getString("NOME"));
+			Disciplinas d = new Disciplinas(rs.getString("NOME"),
+					getConteudo(rs.getInt("ID_DISCIPLINA")));
+			listaDisciplinas.add(d);
+		}
+		return listaDisciplinas;
+		
+	}
+	
 	
 	
 }

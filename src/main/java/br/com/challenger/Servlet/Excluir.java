@@ -17,13 +17,13 @@ public class Excluir extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
    
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		try {
 			String excluir = BOUsuario.excluirUsuario(id);
 			boolean excluido = excluir.equals("ok");
 			
-			response.sendRedirect(excluido ? "adm" : "views/adm-index.jsp?" + excluir);
+			response.sendRedirect(excluido ? "adm?excluido=true" : "views/adm-index.jsp?erro=" + excluir);
 			
 		}	catch(Exception e) {
 			e.printStackTrace();

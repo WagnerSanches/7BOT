@@ -28,7 +28,7 @@ public class Cadastrar implements Tarefa {
 		}
 		
 		if(user.equals("ok"))
-			return "index.html?cadastrado";
+			return "index.html?cadastrado=true";
 
 		return "index.html?cadastro&erro=" + user;
 	}

@@ -28,7 +28,7 @@ public class UsuarioDAO {
 	}
 	
 	public int getUser(int id) throws Exception {
-		stmt = con.prepareStatement("SELECT * FROM SETEBOT_ALUNO WHERE ID_USUARIO = ?");
+		stmt = con.prepareStatement("SELECT * FROM SETEBOT_ALUNO WHERE ID_ALUNO = ?");
 		stmt.setInt(1, id);
 		return stmt.executeUpdate();
 	}
@@ -55,7 +55,7 @@ public class UsuarioDAO {
 	
 	public boolean deleteUser(int id) throws Exception {
 		
-		stmt = con.prepareStatement("DELETE FROM SETEBOT_ALUNO WHERE ID_USUARIO = ?");
+		stmt = con.prepareStatement("DELETE FROM SETEBOT_ALUNO WHERE ID_ALUNO = ?");
 		stmt.setInt(1, id);
 		
 		return stmt.executeUpdate() > 0 ? true : false;

@@ -22,8 +22,15 @@ public class Logar implements Tarefa{
 		String senha = req.getParameter("senha");
 		System.out.println(senha);
 		
-		if(email.equals("7bot@adm.com") && senha.equals("adm123456")) 
+		if(email.equals("7bot@adm.com") && senha.equals("adm123456"))  {
+			cookie = new Cookie("logado", "ADM");
+			resp.addCookie(cookie);
+			
 			return "adm";
+				
+		}
+		
+		
 		String user = "";
 		try {
 			user = BOUsuario.autenticarUsuario(email, senha);

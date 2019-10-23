@@ -17,3 +17,7 @@ insert into SETEBOT_ALUNO values(id_alunos.nextval, 'Douglas Silva Santos', 'dou
 
 
 SELECT * FROM setebot_aluno;
+
+SELECT * FROM SETEBOT_DISCIPLINA;
+
+SELECT * FROM SETEBOT_DISCIPLINA

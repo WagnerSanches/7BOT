@@ -23,6 +23,8 @@ public class listarDisciplinas extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     	DisciplinasDAO dDAO = null;
     	
+
+    	
     	try {
     		
     		dDAO = new DisciplinasDAO();
@@ -39,9 +41,8 @@ public class listarDisciplinas extends HttpServlet {
     		} catch(Exception e) {
     			e.printStackTrace();
     		}
+    	
     	}
-    	
-    	
     	
     	
     }

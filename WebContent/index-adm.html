@@ -1,66 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>APP - adm</title>
-    <link rel="stylesheet" href="css/cabecalho.css">    
-    <link rel="stylesheet" href="css/adm.css">
-    <script src="js/auth.js"></script>
-</head>
-<body>
-    
-    <header>
-        <div class="structure" id="header-flex">
-
-            <div id="header-infos-site">
-            	<a href="app.html"><img src="images/logorecortado.png" alt="Logo 7BOT"></a>
-                <h1 id="user-name">Bem vindo, </h1>
-            </div>
-
-            <div id="changes">
-                <a href="deslogar">Sair</a>
-                <div>
-                    <button id="menu"><img src="images/menu.png" alt="menu"></button>
-                </div>
-            </div>
-        </div>
-        <div id="menu-container">
-            <div>
-                <a href="deslogar">Sair</a>
-            </div>
-        </div>
-    </header>
-
-    <div id="pesquisar_aluno">
-        <div class="structure">
-            <form action="" id="frm-pesquisa">
-                <input type="text" placeholder="procure por nome">
-                <input type="text" placeholder="procure por email">
-                <button id="btn-disciplinas">Pesquisar</button>
-            </form>
-        </div>
-    </div>
-    <div class="structure">
-        <table id="tabela_de_alunos">
-            <thead>
-                <td>Nome</td>
-                <td>Email</td>
-                <td>Data</td>
-                <td>Excluir</td>
-            </thead>
-            <tr>
-                <td>Wagner Aguiar Sanches</td>
-                <td>wagnersanches5@hotmail.com</td>
-                <td>12-08-2019</td>
-                <td><a href="#?"  id="deletar"><img src="images/close.png" alt="deletar"></a></td>
+<c:forEach var="aluno" items="${listaAlunos}">
+ 
+            	<tr>
+	                <td>${aluno.nome }</td>
+	                <td>${aluno.email }</td>
+	                <td>${aluno.data }</td>
+	                
+	                <td><a href="excluirAluno?id=${aluno.id }" id="deletar"><img src="images/close.png" alt="deletar"></a></td>
+            	</tr>
+            
+            </c:forEach>           <tr>
+                <td>Douglas Silva Santos</td>
+                <td>douglas@hotmail.com</td>
+                <td>19-02-2011 </td>
                 
+                <td><a href="http://localhost:8080/7BOT/excluirAluno?id=2" id="deletar"><img src="images/close.png" alt="deletar"></a></td>
             </tr>
-        </table>
-    </div>
-
-</body>
-<script src="js/adm.js"></script>
-<script src="js/cabecalho.js"></script>
-</html>
+        
+       

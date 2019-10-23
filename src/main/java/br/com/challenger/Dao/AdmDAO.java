@@ -25,7 +25,7 @@ public class AdmDAO {
 	}
 	
 	public List<Usuario> criarLista() throws Exception {
-		stmt = con.prepareStatement("SELECT * FROM CLGR_USUARIO");
+		stmt = con.prepareStatement("SELECT * FROM SETEBOT_ALUNO");
 		rs = stmt.executeQuery();
 		Usuario u = null;
 		List<Usuario> listaUsuario = new ArrayList<Usuario>();
@@ -33,11 +33,11 @@ public class AdmDAO {
 		if(rs.next()) {
 			while(rs.next()) {
 				u = new Usuario();
-				u.setId(rs.getString("ID_USUARIO"));
-				u.setNome(rs.getString("NOME_USUARIO"));
-				u.setEmail(rs.getString("EMAIL_USUARIO"));
-				u.setSenha(rs.getString("SENHA_USUARIO"));
-				u.setData(rs.getString("CRIACAO_USUARIO"));
+				System.out.println(rs.getString("ID_ALUNO"));
+				u.setId(rs.getString("ID_ALUNO"));
+				u.setNome(rs.getString("NOME"));
+				u.setEmail(rs.getString("EMAIL"));
+				u.setData(rs.getString("DATA_NASC"));
 				listaUsuario.add(u);
 			}
 		}

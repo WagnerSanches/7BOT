@@ -14,14 +14,15 @@ import java.util.List;
 import br.com.challenger.Dao.AdmDAO;
 import br.com.challenger.Beans.Usuario;
 
-
-public class Adm implements Tarefa{
+@WebServlet("/adm")
+public class Adm extends HttpServlet{
 
 	private static final long serialVersionUID = -5183145833756227731L;
 
+		
 	@Override
-	public String processarRequest(HttpServletRequest req, HttpServletResponse resp) {	
-		AdmDAO aDao = null;
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
 		List<Usuario> usuario = null;
 		
 		try {
@@ -29,11 +30,14 @@ public class Adm implements Tarefa{
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-			req.setAttribute("listaUsuarios", usuario);
-			System.out.println("Ola adm !");
-			return "views/index-adm.jsp";
-			
-
+		req.setAttribute("listaAlunos", usuario);
+		System.out.println("Ola adm !");
+		req.getRequestDispatcher("index-adm.jsp").forward(req, resp);
 	}
-
+	
+	
 }
+	
+	
+	
+

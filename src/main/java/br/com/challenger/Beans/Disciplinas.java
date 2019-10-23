@@ -6,9 +6,6 @@ import java.util.List;
 
 public class Disciplinas {
 	
-	
-
-
 	private String titulo;
 //	private String autor;
 	public List<String> materias;
@@ -41,6 +38,5 @@ public class Disciplinas {
 	}
 	
 	
-	
-}
 
+}

@@ -48,3 +48,30 @@
 #deletar > img{
     width: 25px;
 }
+
+.msg {
+    text-align: center;
+    padding: 10px 0px;
+    display: none;
+}
+#excluido {
+    background: #00bf32;
+    color: #f8f8f8;
+    display: block;
+}
+#erro {
+    background: #858585;
+    color: #f8f8f8;
+    display: block;
+}
+#load {
+    width: 10%;
+    display: block;
+    margin: 20px auto 0px;
+    display: none;
+}
+
+
+.NAOIGUAL {
+    display: none;
+}
