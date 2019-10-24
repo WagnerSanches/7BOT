@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +32,7 @@
         <div id="menu-container">
             <div>
                 <a href="disciplinas">Disciplinas</a>
-                <a href="#minhaConta" id="alterar_conta">Minha conta</a>
+                <a href="configurarConta.jsp" id="alterar_conta">Minha conta</a>
                 <a href="deslogar">Sair</a>
             </div>
         </div>

@@ -24,7 +24,7 @@
 
             <div id="changes">
                 <a href="disciplinas" class="line">Disciplinas</a>
-                <a href="#minhaConta" id="alterar_conta">Minha conta</a>
+                <a href="configurarConta.jsp" id="alterar_conta">Minha conta</a>
                 <a href="deslogar">Sair</a>
                 <div>
                     <button id="menu"><img src="images/menu.png" alt="menu"></button>
@@ -34,7 +34,7 @@
         <div id="menu-container">
             <div>
                 <a href="disciplinas">Disciplinas</a>
-                <a href="#minhaConta" id="alterar_conta">Minha conta</a>
+                <a href="configurarConta.jsp" id="alterar_conta">Minha conta</a>
                 <a href="deslogar">Sair</a>
             </div>
         </div>

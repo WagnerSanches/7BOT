@@ -25,6 +25,8 @@ public class TextToSpeechServlet extends HttpServlet {
 		String msg = req.getParameter("question");
 		
 		IamOptions options = new IamOptions.Builder()
+				// VOZ DA ISABELLA NAO VOLTA MAIS POR MOTIVO DE
+				// ESTOURAMOS O LIMITE
 				.apiKey("z_ljdaWDv_uP4W2vQnMiichTerDD-kK0dB7qch5JR9Wz")
 				.build();
 		
